@@ -12,53 +12,107 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="all.css">
+      <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="lkc-preloader">
+
   <div class="lkc-loader">
 
-    <!-- LOGO / NAME -->
     <h2 class="lkc-logo">Luckin Consol</h2>
 
-    <!-- TRACK -->
-    <div class="lkc-track">
-      <div class="lkc-container-box"></div>
+    <!-- WORLD MAP SYSTEM -->
+    <div class="lkc-map">
+
+      <div class="lkc-point p1"></div>
+      <div class="lkc-point p2"></div>
+      <div class="lkc-point p3"></div>
+      <div class="lkc-point p4"></div>
+
+      <!-- MOVING ICONS -->
+      <i class="fas fa-ship ship"></i>
+      <i class="fas fa-plane planes"></i>
+      <i class="fas fa-truck truck"></i>
+
+      <!-- ROUTE LINES -->
+      <div class="route r1"></div>
+      <div class="route r2"></div>
+
     </div>
 
-    <!-- LOADING TEXT -->
-    <p class="lkc-loading-text">Loading Logistics Experience...</p>
+    <p class="lkc-loading-text">
+      Connecting Global Logistics Network...
+    </p>
 
   </div>
-</div>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
-
-    <!-- LEFT -->
-    <div class="top-left">
-      <span><i class="fa-solid fa-phone"></i> +91 98401 94940</span>
-      <span><i class="fa-solid fa-envelope"></i> krishna@luckinconsol.com</span>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="top-right"><div class="social">
-        <a href="https://wa.me/917406213220?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Luckin%20Consol%20Logistics%20services.%20Please%20share%20details%20about%20LCL%20Consolidation%2C%20Air%20Freight%2C%20Ocean%20Freight%2C%20and%20Customs%20Handling.%20Looking%20forward%20to%20your%20response." target="_blank" style="color: white;"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="" target="_blank" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.linkedin.com/company/115234002/" target="_blank" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="" target="_blank" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-      <span>Mon - Fri: 09:30 - 05:30</span>
-      <span>Sat : 09:30 - 01:30</span>
-      
-    </div>
-
-  </div>
 </div>
 
 
+<!-- POPUP -->
+<div id="quotePopup" class="popup-overlay">
+
+  <div class="popup-box">
+
+    <!-- CLOSE BUTTON -->
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <!-- LEFT IMAGE -->
+    <div class="popup-left"></div>
+
+    <!-- RIGHT FORM -->
+    <div class="popup-right">
+
+      <span class="small-text">GET FREE QUOTE</span>
+      <h2>Request a Quote</h2>
+
+     <form id="contactForm1">
+
+  <div class="input-box">
+    <i class="fa fa-user"></i>
+    <input type="text" id="name1" placeholder="Your Name" required>
+  </div>
+
+  <div class="input-box">
+    <i class="fa fa-envelope"></i>
+    <input type="email" id="email1" placeholder="Email Address" required>
+  </div>
+
+  <div class="input-box">
+    <i class="fa fa-phone"></i>
+    <input type="text" id="phone1" placeholder="Phone Number" required>
+  </div>
+
+  <div class="input-box">
+    <i class="fa fa-cog"></i>
+    <select id="service1" required>
+      <option value="">Select Service</option>
+      <option>LCL Consolidation</option>
+      <option>Air Freight</option>
+      <option>Ocean Freight</option>
+      <option>DG Handling</option>
+      <option>Project Cargo</option>
+      <option>ISO Tanker</option>
+      <option>Customs Handling</option>
+    </select>
+  </div>
+
+  <div class="input-box textarea">
+    <i class="fa fa-comment"></i>
+    <textarea id="message1" placeholder="Enter your message" required></textarea>
+  </div>
+
+  <button type="submit" class="quote-btn">
+    Get Your Quote →
+  </button>
+
+</form>
+
+    </div>
+
+  </div>
+</div>
 
 <header class="lx-header-wrapper">
   <div class="container-fluid lx-header-inner">
@@ -70,29 +124,106 @@
 
     <!-- DESKTOP MENU -->
     <ul class="lx-nav-menu d-none d-lg-flex align-items-center mb-0">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
 
-      <li class="nav-item dropdown">
-        <a class="nav-link lx-service-link" href="#" data-bs-toggle="dropdown">
-          Services <i class="bi bi-chevron-down lx-arrow-icon"></i>
+  <li>
+    <a href="index.html">
+      <i class="fa-solid fa-house me-1"></i>
+      Home
+    </a>
+  </li>
+
+  <li>
+    <a href="about.html">
+      <i class="fa-solid fa-user me-1"></i>
+      About
+    </a>
+  </li>
+
+  <li class="nav-item dropdown">
+
+    <a class="nav-link lx-service-link" href="#" data-bs-toggle="dropdown">
+      <i class="fa-solid fa-briefcase me-1"></i>
+      Services
+      <i class="bi bi-chevron-down lx-arrow-icon"></i>
+    </a>
+
+    <ul class="dropdown-menu lx-dropdown-box">
+
+      <li>
+        <a class="dropdown-item" href="lclconsolidation.html">
+          <i class="fa-solid fa-box me-1"></i>
+          LCL Consolidation
         </a>
-
-        <ul class="dropdown-menu lx-dropdown-box">
-          <li><a class="dropdown-item" href="lclconsolidation.html">LCL Consolidation</a></li>
-          <li><a class="dropdown-item" href="dghandling.html">DG Handling</a></li>
-          <li><a class="dropdown-item" href="airfreight.html">Air Freight</a></li>
-          <li><a class="dropdown-item" href="oceanfreight.html">Ocean Freight</a></li>
-          <li><a class="dropdown-item" href="project.html">Project Cargo</a></li>
-          <li><a class="dropdown-item" href="isotanker.html">Iso Tankers</a></li>
-          <li><a class="dropdown-item" href="customshandling.html">Customs Handling</a></li>
-          <li><a class="dropdown-item" href="lastmileconnectivity.html">Last Mile Connectivity</a></li>
-        </ul>
       </li>
 
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a class="dropdown-item" href="dghandling.html">
+          <i class="fa-solid fa-triangle-exclamation me-1"></i>
+          DG Handling
+        </a>
+      </li>
+
+      <li>
+        <a class="dropdown-item" href="airfreight.html">
+          <i class="fa-solid fa-plane me-1"></i>
+          Air Freight
+        </a>
+      </li>
+
+      <li>
+        <a class="dropdown-item" href="oceanfreight.html">
+          <i class="fa-solid fa-ship me-1"></i>
+          Ocean Freight
+        </a>
+      </li>
+
+      <li>
+        <a class="dropdown-item" href="project.html">
+          <i class="fa-solid fa-truck-fast me-1"></i>
+          Project Cargo
+        </a>
+      </li>
+
+      <!-- <li>
+        <a class="dropdown-item" href="isotanker.html">
+          <i class="fa-solid fa-oil-can me-1"></i>
+          Iso Tankers
+        </a>
+      </li>
+
+      <li>
+        <a class="dropdown-item" href="customshandling.html">
+          <i class="fa-solid fa-file-circle-check me-1"></i>
+          Customs Handling
+        </a>
+      </li>
+
+      <li>
+        <a class="dropdown-item" href="lastmileconnectivity.html">
+          <i class="fa-solid fa-location-dot me-1"></i>
+          Last Mile Connectivity
+        </a>
+      </li> -->
+
     </ul>
+
+  </li>
+
+  <li>
+    <a href="gallery.html">
+      <i class="fa-solid fa-image me-1"></i>
+      Gallery
+    </a>
+  </li>
+
+  <li>
+    <a href="contact.html">
+      <i class="fa-solid fa-envelope me-1"></i>
+      Contact
+    </a>
+  </li>
+
+</ul>
 
     <!-- RIGHT SIDE -->
     <div class="lx-right-area">
@@ -124,55 +255,29 @@
   </div>
   <span>Track Now</span>
 </a>
-
-
- <div class="lx-hamburger-btn d-none d-lg-flex" data-bs-toggle="offcanvas" data-bs-target="#sidebarRight">
+<div class="lx-hamburger-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#lxMobileMenu">
         <i class="fa-solid fa-bars"></i>
       </div>
-
-      <div class="lx-hamburger-btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#lxMobileMenu">
-        <i class="fa-solid fa-bars"></i>
+<div class="top-right d-none d-lg-flex">
+      <!-- <span>Mon - Fri: 09:30 - 05:30</span>
+      <span>Sat : 09:30 - 01:30</span> -->
+      <div class="social">
+        <a href="https://wa.me/+91 9840194940?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Luckin%20Consol%20Logistics%20services.%20Please%20share%20details%20about%20LCL%20Consolidation%2C%20Air%20Freight%2C%20Ocean%20Freight%2C%20and%20Customs%20Handling.%20Looking%20forward%20to%20your%20response." target="_blank" style="color: white;"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:info@luckinconsol.com" target="_blank" style="color: white;"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/company/115234002/" target="_blank" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+        <!-- <a href="" target="_blank" style="color: white;"><i class="fa-brands fa-instagram"></i></a> -->
       </div>
+     </div>
+
+
+ 
 
     </div>
 
   </div>
 </header>
 
-<div class="offcanvas offcanvas-end sidebar-custom" id="sidebarRight">
-  
-  <!-- HEADER -->
-  <div class="offcanvas-header">
-    <img src="images/mainlogo.jpeg" class="sidebar-logo" alt="logo">
-    <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-  </div>
 
-  <!-- BODY -->
-  <div class="offcanvas-body">
-
-    <h4 class="sidebar-title">Luckin Consol Logistics</h4>
-
-    <p class="sidebar-text">
-      We specialize in LCL consolidation services, offering cost-effective, secure, and efficient cargo solutions across global shipping networks with reliable delivery and strong logistics support.
-    </p>
-
-    <!-- SERVICES -->
-    <div class="sidebar-services">
-      <h5>Our Services</h5>
-      <ul>
-        <li>✔ LCL Consolidation</li>
-        <li>✔ Ocean Freight</li>
-        <li>✔ Air Freight</li>
-        <li>✔ Customs Clearance</li>
-        <li>✔ Project Cargo</li>
-      </ul>
-    </div>
-
-    <!-- CTA BUTTON -->
-    <a href="contact.html" class="sidebar-btn">Get a Quote →</a>
-
-  </div>
-</div>
 
 
 <!-- MOBILE SIDEBAR -->
@@ -204,9 +309,9 @@
           <li><a href="airfreight.html">Air Freight</a></li>
           <li><a href="oceanfreight.html">Ocean Freight</a></li>
           <li><a href="project.html">Project Cargo</a></li>
-          <li><a href="isotanker.html">ISO Tankers</a></li>
+          <!-- <li><a href="isotanker.html">ISO Tankers</a></li>
           <li><a href="customshandling.html">Customs Handling</a></li>
-          <li><a href="lastmileconnectivity.html">Last Mile Connectivity</a></li>
+          <li><a href="lastmileconnectivity.html">Last Mile Connectivity</a></li> -->
         </ul>
       </li>
 
@@ -217,8 +322,6 @@
 
   </div>
 </div>
-
-
 
 <section class="lx-about-hero">
   <div class="container">
@@ -371,8 +474,225 @@ To become a trusted global logistics partner recognized for operational excellen
 
   </div>
 </section>
+<!-- ========================= -->
+<!-- WHY CHOOSE US -->
+<!-- ========================= -->
 
+<section class="cargo-edge-section">
 
+    <div class="container">
+
+        <!-- HEADING -->
+        <div class="cargo-edge-heading">
+
+            <span class="cargo-edge-tag">
+                <i class="fa-solid fa-layer-group"></i>
+                Why Choose Us
+            </span>
+
+            <h2>
+                Delivering Reliable Logistics
+                With Speed, Security & Precision
+            </h2>
+
+        </div>
+
+        <!-- WRAPPER -->
+        <div class="cargo-edge-wrapper">
+
+            <!-- CARD -->
+            <div class="cargo-edge-box">
+
+                <div class="cargo-edge-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+
+                <div class="cargo-edge-number">01</div>
+
+                <div class="cargo-edge-content">
+                    <h3>Strong Global Agency Network</h3>
+
+                    <p>
+                        Extensive worldwide partnerships ensuring smooth
+                        and efficient international cargo movement.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="cargo-edge-box">
+
+                <div class="cargo-edge-icon">
+                    <i class="fa-solid fa-ship"></i>
+                </div>
+
+                <div class="cargo-edge-number">02</div>
+
+                <div class="cargo-edge-content">
+                    <h3>Competitive Freight Solutions</h3>
+
+                    <p>
+                        Affordable shipping strategies tailored to your
+                        logistics and business requirements.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="cargo-edge-box">
+
+                <div class="cargo-edge-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div class="cargo-edge-number">03</div>
+
+                <div class="cargo-edge-content">
+                    <h3>Dedicated Customer Support</h3>
+
+                    <p>
+                        Professional support team available for quick
+                        assistance and shipment guidance.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="cargo-edge-box">
+
+                <div class="cargo-edge-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div class="cargo-edge-number">04</div>
+
+                <div class="cargo-edge-content">
+                    <h3>Timely Shipment Updates</h3>
+
+                    <p>
+                        Real-time shipment tracking with transparent
+                        status notifications and updates.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="cargo-edge-box">
+
+                <div class="cargo-edge-icon">
+                    <i class="fa-solid fa-box-open"></i>
+                </div>
+
+                <div class="cargo-edge-number">05</div>
+
+                <div class="cargo-edge-content">
+                    <h3>Safe & Secure Cargo Handling</h3>
+
+                    <p>
+                        Advanced safety standards ensuring secure cargo
+                        transport across all routes.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+            <div class="cargo-edge-box">
+
+                <div class="cargo-edge-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <div class="cargo-edge-number">06</div>
+
+                <div class="cargo-edge-content">
+                    <h3>Specialized Cargo Expertise</h3>
+
+                    <p>
+                        Expert management of oversized, fragile and
+                        high-value cargo shipments.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="lx-cta-section" data-aos="fade-up">
+  <div class="container">
+
+    <div class="lx-cta-wrapper">
+
+      <div class="row align-items-center g-4">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-7" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="lx-cta-content">
+
+            <div class="lx-cta-badge mb-2"style=color:#fff;>
+              <i class="fa-solid fa-globe"></i>
+              Global Logistics Support
+            </div>
+
+            <h2 class="lx-cta-title">
+              Let’s Move Your Cargo Together
+            </h2>
+
+            <p class="lx-cta-text"style=color:#fff;>
+              Partner with Luckin Consol for reliable freight forwarding,
+              seamless cargo handling, and efficient logistics solutions
+              tailored to your business needs worldwide.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+
+          <div class="lx-cta-right">
+
+            <!-- CALL BOX -->
+            <div class="lx-call-box">
+
+              <div class="lx-call-icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+
+              <div>
+                <span>Call Us Anytime</span>
+                <h5>+91 9840194940</h5>
+              </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <a href="contact.html" class="lx-cta-btn">
+              Get A Quote
+              <span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 <section class="lkc-faq-section">
   <div class="container">
 
@@ -465,48 +785,6 @@ To become a trusted global logistics partner recognized for operational excellen
 </section>
 
 
-
-<section class="lx-cta-section">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- LEFT TEXT -->
-      <div class="col-lg-7">
-        <h2 class="lx-cta-title">
-          Looking for the Best <br>
-          logistics Transport Service?
-        </h2>
-      </div>
-
-      <!-- RIGHT CONTENT -->
-      <div class="col-lg-5">
-        <div class="lx-cta-right">
-
-          <!-- CALL -->
-          <div class="lx-call-box">
-            <div class="lx-call-icon">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div>
-              <span>Call Us Free</span>
-              <h5>+999 325 6589</h5>
-            </div>
-          </div>
-
-          <!-- BUTTON -->
-          <a href="contact.html" class="lx-cta-btn">
-            Get A Quote 
-            <span><i class="bi bi-arrow-right"></i></span>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
 <footer class="lx-footer">
   <div class="container">
 
@@ -514,52 +792,151 @@ To become a trusted global logistics partner recognized for operational excellen
 
       <!-- LOGO -->
       <div class="col-lg-3 col-md-6">
-        <img src="images/mainlogo.jpeg" class="lx-logo mb-3" alt="">
+       <img src="images/mainlogo.jpeg" class="lx-logo mb-3" alt="">
+
+        <h5 style="color:white;">
+          <i class="fa-solid fa-globe me-2"></i>
+          LINKING YOUR THINKING
+        </h5>
+
         <p class="lx-desc">
           Delivering Logistics with Precision, Powered by Trust.
         </p>
 
         <div class="lx-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://wa.me/917406213220?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AgriPoultry%20Tec%20Expo.%20Could%20you%20please%20provide%20more%20details%20about%20exhibitor%20registration%2C%20stall%20booking%2C%20and%20visitor%20passes%3F"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+
+          <a href="https://www.linkedin.com/company/115234002/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a href="https://wa.me/+919840194940?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20AgriPoultry%20Tec%20Expo.%20Could%20you%20please%20provide%20more%20details%20about%20exhibitor%20registration%2C%20stall%20booking%2C%20and%20visitor%20passes%3F">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
         </div>
       </div>
 
       <!-- QUICK LINKS -->
         <div class="col-lg-3 col-md-6">
-  <h6 class="lx-title text-white" style="font-size: 18px;">Quick Links</h6>
-  <ul class="lx-links">
-    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-    <li><a href="about.html"><i class="fas fa-user"></i> About Us</a></li>
-    <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
-    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-  </ul>
+ 
+        <h6 class="lx-title text-white" style="font-size: 18px;">
+          <i class="fa-solid fa-link me-2"></i>
+          Quick Links
+        </h6>
+
+        <ul class="lx-links">
+
+          <li>
+            <a href="index.html">
+              <i class="fas fa-house"></i>
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html">
+              <i class="fas fa-user"></i>
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="gallery.html">
+              <i class="fas fa-image"></i>
+              Gallery
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              <i class="fas fa-envelope"></i>
+              Contact Us
+            </a>
+          </li>
+
+        </ul>
 </div>
       <!-- SERVICES -->
       <div class="col-lg-3 col-md-6">
-        <h6 class="lx-title text-white" style="font-size: 18px;">Services</h6>
+        <h6 class="lx-title text-white" style="font-size: 18px;">
+          <i class="fa-solid fa-briefcase me-2"></i>
+          Services
+        </h6>
+
         <ul class="lx-links">
-          <li><a href="lclconsolidation.html">LCL Consolidation</a></li>
-          <li><a href="dghandling.html">DG Handling</a></li>
-          <li><a href="airfreight.html">Air Freight</a></li>
-          <li><a href="oceanfreight.html">Ocean Freight</a></li>
-          <li><a href="project.html">Project Cargo</a></li>
-          <li><a href="customshandling.html">Customs Handling</a></li>
-          <li><a href="lastmileconnectivity.html">Last Mile</a></li>
+
+          <li>
+            <a href="lclconsolidation.html">
+              <i class="fa-solid fa-box"></i>
+              LCL Consolidation
+            </a>
+          </li>
+
+          <li>
+            <a href="dghandling.html">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              DG Handling
+            </a>
+          </li>
+
+          <li>
+            <a href="airfreight.html">
+              <i class="fa-solid fa-plane"></i>
+              Air Freight
+            </a>
+          </li>
+
+          <li>
+            <a href="oceanfreight.html">
+              <i class="fa-solid fa-ship"></i>
+              Ocean Freight
+            </a>
+          </li>
+
+          <li>
+            <a href="project.html">
+              <i class="fa-solid fa-truck-fast"></i>
+              Project Cargo
+            </a>
+          </li>
+
         </ul>
       </div>
 
       <!-- CONTACT -->
       <div class="col-lg-3 col-md-6">
-        <h6 class="lx-title text-white" style="font-size: 18px;">Contact</h6>
+               <h6 class="lx-title text-white" style="font-size: 18px;">
+          <i class="fa-solid fa-headset me-2"></i>
+          Contact
+        </h6>
 
-        <div class="lx-contact">
-          <p><i class="fas fa-map-marker-alt"></i> ‘C’ Block, Old No. 9/2, New No. 16, First Floor, 10th Street, Anna Nagar (East), Chennai 600102.</p>
-          <p><i class="fas fa-envelope"></i> krishna@luckinconsol.com</p>
-          <p><i class="fas fa-phone"></i> +91 98401 94940</p>
-        </div>
+       <div class="lx-contact">
+
+  <p>
+    <i class="fas fa-map-marker-alt"></i>
+
+    ‘C’ Block, Old No. 9/2, New No. 16,
+    First Floor, 10th Street,
+    Anna Nagar (East), Chennai 600102.
+  </p>
+
+  <p>
+    <i class="fas fa-envelope"></i>
+
+    <a href="mailto:info@luckinconsol.com">
+      info@luckinconsol.com
+    </a>
+  </p>
+
+  <p>
+    <i class="fas fa-phone-volume"></i>
+
+    <a href="tel:+919840194940">
+      +91 98401 94940
+    </a>
+  </p>
+
+</div>
       </div>
 
     </div>
@@ -580,7 +957,7 @@ To become a trusted global logistics partner recognized for operational excellen
   </button>
   <div class="whatsapp-icon whatsapp-float">
   <a 
-    href="https://wa.me/917406213220?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Luckin%20Consol%20Logistics%20services.%20Please%20share%20details%20about%20LCL%20Consolidation%2C%20Air%20Freight%2C%20Ocean%20Freight%2C%20and%20Customs%20Handling.%20Looking%20forward%20to%20your%20response."
+    href="https://wa.me/+919840194940?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Luckin%20Consol%20Logistics%20services.%20Please%20share%20details%20about%20LCL%20Consolidation%2C%20Air%20Freight%2C%20Ocean%20Freight%2C%20and%20Customs%20Handling.%20Looking%20forward%20to%20your%20response."
     target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Build Tec Expo WhatsApp">
   </a>
