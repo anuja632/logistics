@@ -360,7 +360,7 @@ header
       position: absolute;
       right: 10px;
       bottom: -80px;
-      z-index: 1;
+      z-index: 2;
       box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     }
 
@@ -459,6 +459,7 @@ header
       .img-secondary {
         width: 180px;
         height: 250px;
+        display: none;
       }
 
       .main-title {
@@ -4619,7 +4620,7 @@ list-style: none;
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .lx-title {
-    font-size: 32px;
+    font-size: 32px !important;
   }
 
   .lx-process-card {
@@ -5092,6 +5093,7 @@ list-style: none;
   line-height: 30px;
   margin-bottom: 18px;
   font-size: 16px;
+  text-align: justify;
 }
 
 /* SERVICES */
@@ -5471,7 +5473,7 @@ list-style: none;
   }
 
   .lx-digital-content h2 {
-    font-size: 28px;
+    font-size: 23px !important;
   }
 }
 .lx-dg-section {
@@ -5974,6 +5976,7 @@ list-style: none;
 .air-box p {
   opacity: 0.85;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* FEATURES */
@@ -8750,9 +8753,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         font-size: 28px;
     }
 
-    .cargo-orbit-center{
+  .cargo-orbit-center {
         height: 200px;
-    }
+        border: none;
+        border-radius: 10px;}
 
     .cargo-orbit-core{
         width: 80px;
@@ -8892,6 +8896,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* TEXT */
 .ocean-trust-content p{
+  text-align: justify;
     color: rgba(255,255,255,0.75);
 
     font-size: 15px;
