@@ -5,7 +5,7 @@ body,html{
 
 
 } 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap'); */
 
 body {
   font-family: 'IM Fell Great Primer SC', serif;
@@ -14,11 +14,11 @@ body {
 html, body {
   overflow-x: hidden;
 }
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
-
-body {
-  font-family: 'IM Fell Great Primer SC', serif;
+/* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap'); */
+p{
+  font-family: 'poppins',sans-serif !important;
 }
+
 
 body
 {
@@ -36,13 +36,7 @@ header
 }
 
 
-header
-{
-     
 
-    background-color: black;
-    color: white;
-}
 
 
  .slider
@@ -1369,7 +1363,7 @@ header
 .lx-links a {
   color: #ccc;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   transition: 0.3s;
 }
 
@@ -1399,7 +1393,7 @@ header
 
 /* CONTACT */
 .lx-contact p {
-  font-size: 14px;
+  font-size: 15px;
   color: #fff;
   margin-bottom: 10px;
   display: flex;
@@ -1577,7 +1571,7 @@ header
   font-weight: 700;
   margin-bottom: 6px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 0.5px;
 }
 
@@ -3725,9 +3719,9 @@ textarea.lkc-input {
   z-index: 3;
   transition: 0.3s ease;
 }
-.lxs-card h4{
+/* .lxs-card h4{
   color:#29435C;
-}
+} */
 /* HOVER EFFECT */
 .lxs-card:hover {
   transform: translateY(-12px);
@@ -3763,7 +3757,7 @@ textarea.lkc-input {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-top: 18px;
+  /* margin-top: 18px; */
 }
 
 .lx-small-title i {
@@ -4195,7 +4189,7 @@ list-style: none;
 
 /* TITLE */
 .ls-card-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 8px;
   color: #1c1c1c;
@@ -4203,7 +4197,7 @@ list-style: none;
 
 /* TEXT */
 .ls-card-text {
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
   line-height: 1.5;
 }
@@ -5045,19 +5039,6 @@ list-style: none;
 .lx-lcl-badge i {
   color: #e52125;
   margin-right: 8px;
-}
-
-/* SMALL TITLE */
-.lx-small-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #e52125;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
 }
 
 .lx-small-title i {
