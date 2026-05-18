@@ -85,7 +85,7 @@ header
 
 .slider .list .item .content p:nth-child(1){
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 4px;
 }
 .slider .list .item .content h2{
      font-size: 100px;
@@ -3401,6 +3401,7 @@ textarea.lkc-input {
 .lx-content h5 {
   font-weight: 700;
   margin-bottom: 10px;
+  font-size: 25px;
 }
 
 /* TEXT */
