@@ -50,8 +50,8 @@ header
   position: absolute;
   inset: 0 0 0 0;
  
-  opacity: 0;
-  transition: 5s;
+  /* opacity: 0;
+  transition: 5s; */
 }
 
 /* IMAGE */
