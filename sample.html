@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Split Logistics Slider</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet"
+/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero-slider{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+
+.carousel-item{
+    height:100vh;
+    position:relative;
+}
+
+/* Split Layout */
+
+.slide-wrapper{
+    display:grid;
+    grid-template-columns:42% 58%;
+    width:100%;
+    height:100vh;
+}
+
+/* ========================= */
+/* LEFT SIDE */
+/* ========================= */
+
+.left-content{
+    background:
+    linear-gradient(rgba(8,18,40,.94),rgba(8,18,40,.95)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:80px;
+    position:relative;
+    overflow:hidden;
+}
+
+.left-content::before{
+    content:'';
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:radial-gradient(circle,#00d9ff 0%,transparent 70%);
+    top:-150px;
+    left:-120px;
+    opacity:.18;
+}
+
+.left-content::after{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:radial-gradient(circle,#ff9f1a 0%,transparent 70%);
+    bottom:-100px;
+    right:-80px;
+    opacity:.12;
+}
+
+/* Text */
+
+.content-box{
+    max-width:540px;
+    position:relative;
+    z-index:5;
+}
+
+.content-box h5{
+    color:#00d9ff;
+    font-size:15px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+    font-weight:500;
+}
+
+.content-box h1{
+    color:#fff;
+    font-size:84px;
+    line-height:0.95;
+    margin-bottom:35px;
+    font-weight:600;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.content-box p{
+    color:#d9d9d9;
+    font-size:18px;
+    line-height:2;
+    margin-bottom:45px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+/* Buttons */
+
+.hero-btns{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn-custom{
+    padding:16px 34px;
+    border-radius:0;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:.4s;
+}
+
+.btn-orange{
+    background:#ff9f1a;
+    color:#fff;
+}
+
+.btn-orange:hover{
+    background:#ff7b00;
+    color:#fff;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.35);
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#111;
+}
+
+/* ========================= */
+/* RIGHT IMAGE */
+/* ========================= */
+
+.right-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.right-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    animation:zoom 10s linear infinite alternate;
+}
+
+@keyframes zoom{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+
+}
+
+/* Overlay */
+
+.right-image::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+    to right,
+    rgba(0,0,0,.35),
+    rgba(0,0,0,.08)
+    );
+}
+
+/* Floating Box */
+
+.float-box{
+    position:absolute;
+    right:60px;
+    bottom:60px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+    padding:32px;
+    width:270px;
+    color:#fff;
+    z-index:10;
+    border-left:4px solid #ff9f1a;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.float-box h2{
+    font-size:52px;
+    margin-bottom:10px;
+    color:#ff9f1a;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.float-box p{
+    line-height:1.9;
+    color:#eee;
+    font-size:15px;
+}
+
+/* ========================= */
+/* INDICATORS */
+/* ========================= */
+
+.carousel-indicators{
+    position:absolute;
+    left:28px;
+    top:50%;
+    transform:translateY(-50%);
+    flex-direction:column;
+    margin:0;
+    gap:14px;
+    z-index:20;
+}
+
+.carousel-indicators button{
+    width:16px !important;
+    height:16px !important;
+    border-radius:50%;
+    border:1px solid #fff !important;
+    background:transparent !important;
+    opacity:1 !important;
+}
+
+.carousel-indicators .active{
+    background:#fff !important;
+}
+
+/* Controls */
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:70px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:992px){
+
+    .slide-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .left-content{
+        position:absolute;
+        inset:0;
+        z-index:5;
+        background:rgba(10,15,30,.75);
+    }
+
+    .right-image{
+        height:100vh;
+    }
+
+    .content-box{
+        text-align:center;
+        margin:auto;
+    }
+
+    .hero-btns{
+        justify-content:center;
+    }
+
+    .content-box h1{
+        font-size:58px;
+    }
+
+    .float-box{
+        display:none;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .left-content{
+        padding:40px 25px;
+    }
+
+    .content-box h1{
+        font-size:42px;
+    }
+
+    .content-box p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .btn-custom{
+        width:100%;
+        text-align:center;
+    }
+
+    .carousel-indicators{
+        left:10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div
+id="logisticsSlider"
+class="carousel slide carousel-fade hero-slider"
+data-bs-ride="carousel"
+data-bs-interval="2500"
+data-bs-pause="false"
+>
+
+    <!-- Indicators -->
+
+    <div class="carousel-indicators">
+
+        <button
+        type="button"
+        data-bs-target="#logisticsSlider"
+        data-bs-slide-to="0"
+        class="active">
+        </button>
+
+        <button
+        type="button"
+        data-bs-target="#logisticsSlider"
+        data-bs-slide-to="1">
+        </button>
+
+        <button
+        type="button"
+        data-bs-target="#logisticsSlider"
+        data-bs-slide-to="2">
+        </button>
+
+        <button
+        type="button"
+        data-bs-target="#logisticsSlider"
+        data-bs-slide-to="3">
+        </button>
+
+        <button
+        type="button"
+        data-bs-target="#logisticsSlider"
+        data-bs-slide-to="4">
+        </button>
+
+    </div>
+
+    <!-- Slides -->
+
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+
+        <div class="carousel-item active">
+
+            <div class="slide-wrapper">
+
+                <!-- LEFT -->
+
+                <div class="left-content">
+
+                    <div class="content-box">
+
+                        <h5>LCL Consolidation</h5>
+
+                        <h1>
+                            Cost Effective
+                            Cargo Solutions
+                        </h1>
+
+                        <p>
+                            Reliable LCL consolidation services with secure cargo handling,
+                            optimized container space and timely global delivery support
+                            for all shipment sizes.
+                        </p>
+
+                        <div class="hero-btns">
+
+                            <a href="#" class="btn-custom btn-orange">
+                                Book Shipment
+                            </a>
+
+                            <a href="#" class="btn-custom btn-outline">
+                                Get Quote
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="right-image">
+
+                    <img
+                    src="https://img.magnific.com/premium-psd/cargo-containers-mockup_1259285-113.jpg?uid=R208066470&ga=GA1.1.1230731267.1778150724&semt=ais_incoming&w=740&q=80"
+                    alt="LCL Consolidation">
+
+                    <div class="float-box">
+
+                        <h2>LCL</h2>
+
+                        <p>
+                            Safe consolidation services with faster transit and reduced shipping cost.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 2 -->
+
+        <div class="carousel-item">
+
+            <div class="slide-wrapper">
+
+                <div class="left-content">
+
+                    <div class="content-box">
+
+                        <h5>DG Handling</h5>
+
+                        <h1>
+                            Dangerous Goods
+                            Management
+                        </h1>
+
+                        <p>
+                            Certified DG cargo handling solutions with international safety
+                            standards, secure packaging and compliance-driven transportation
+                            services worldwide.
+                        </p>
+
+                        <div class="hero-btns">
+
+                            <a href="#" class="btn-custom btn-orange">
+                                Explore Service
+                            </a>
+
+                            <a href="#" class="btn-custom btn-outline">
+                                Contact Team
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1565891741441-64926e441838?q=80&w=1600&auto=format&fit=crop"
+                    alt="DG Handling">
+
+                    <div class="float-box">
+
+                        <h2>100%</h2>
+
+                        <p>
+                            Safety-focused dangerous goods logistics with expert supervision.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 3 -->
+
+        <div class="carousel-item">
+
+            <div class="slide-wrapper">
+
+                <div class="left-content">
+
+                    <div class="content-box">
+
+                        <h5>Ocean Freight</h5>
+
+                        <h1>
+                            Global Sea
+                            Freight Solutions
+                        </h1>
+
+                        <p>
+                            Flexible ocean freight services for import and export cargo with
+                            dependable vessel scheduling, customs support and worldwide coverage.
+                        </p>
+
+                        <div class="hero-btns">
+
+                            <a href="#" class="btn-custom btn-orange">
+                                Start Shipping
+                            </a>
+
+                            <a href="#" class="btn-custom btn-outline">
+                                Learn More
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right-image">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1600&auto=format&fit=crop"
+                    alt="Ocean Freight">
+
+                    <div class="float-box">
+
+                        <h2>24/7</h2>
+
+                        <p>
+                            Real-time shipment tracking and smooth international sea transport.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 4 -->
+
+        <div class="carousel-item">
+
+            <div class="slide-wrapper">
+
+                <div class="left-content">
+
+                    <div class="content-box">
+
+                        <h5>Air Freight</h5>
+
+                        <h1>
+                            Fast & Secure
+                            Air Cargo
+                        </h1>
+
+                        <p>
+                            Express air freight solutions with rapid transit, priority cargo
+                            movement and secure international delivery for time-sensitive shipments.
+                        </p>
+
+                        <div class="hero-btns">
+
+                            <a href="#" class="btn-custom btn-orange">
+                                Ship Now
+                            </a>
+
+                            <a href="#" class="btn-custom btn-outline">
+                                Contact Us
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right-image">
+
+                    <img
+                    src="https://img.magnific.com/premium-photo/airplane-hong-kong-international-airport_255175-2146.jpg?uid=R208066470&ga=GA1.1.1230731267.1778150724&semt=ais_incoming&w=740&q=80"
+                    alt="Air Freight">
+
+                    <div class="float-box">
+
+                        <h2>Express</h2>
+
+                        <p>
+                            Quick air cargo movement with reliable global airline network.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Slide 5 -->
+
+        <div class="carousel-item">
+
+            <div class="slide-wrapper">
+
+                <div class="left-content">
+
+                    <div class="content-box">
+
+                        <h5>Project Cargo</h5>
+
+                        <h1>
+                            Heavy Lift
+                            Cargo Experts
+                        </h1>
+
+                        <p>
+                            Specialized project cargo transportation solutions for oversized,
+                            heavy and complex industrial shipments with end-to-end logistics support.
+                        </p>
+
+                        <div class="hero-btns">
+
+                            <a href="#" class="btn-custom btn-orange">
+                                Request Quote
+                            </a>
+
+                            <a href="#" class="btn-custom btn-outline">
+                                View Service
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="right-image">
+
+                    <img
+                    src="https://img.magnific.com/free-photo/ship-drydock_1398-242.jpg?t=st=1779270852~exp=1779274452~hmac=b54698f3a357e540bafbdc334faf523d4b10fb43c41a8b0ec6b962dde6c4e855&w=1480"
+                    alt="Project Cargo">
+
+                    <div class="float-box">
+
+                        <h2>Global</h2>
+
+                        <p>
+                            Expert handling for oversized industrial and project cargo shipments.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
