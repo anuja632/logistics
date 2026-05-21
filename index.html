@@ -1235,7 +1235,7 @@ data-bs-pause="false"
       </div>
 
       <!-- SMALL CARD -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-xl-3 col-lg-4 col-md-6">
         <div class="vkserve-small-card">
 
           <span class="vkserve-small-number">03</span>
@@ -1254,7 +1254,7 @@ data-bs-pause="false"
       </div>
 
       <!-- SMALL CARD -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-xl-3 col-lg-4 col-md-6">
         <div class="vkserve-small-card">
 
           <span class="vkserve-small-number">04</span>
@@ -1273,7 +1273,7 @@ data-bs-pause="false"
       </div>
 
       <!-- SMALL CARD -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-xl-3 col-lg-4 col-md-6">
         <div class="vkserve-small-card">
 
           <span class="vkserve-small-number">05</span>
@@ -1292,7 +1292,7 @@ data-bs-pause="false"
       </div>
 
       <!-- SMALL CARD -->
-      <div class="col-lg-3 col-md-6">
+      <div class="col-xl-3 col-lg-4 col-md-6">
         <div class="vkserve-small-card">
 
           <span class="vkserve-small-number">06</span>
@@ -1593,74 +1593,65 @@ Leading LCL Consolidation Experts!
               Request a Quote
             </h2>
 
-            <form>
+                      <form id="contactForm">
 
-              <!-- NAME -->
-              <div class="vkquote-group">
-                <i class="fas fa-user"></i>
-                <input type="text" class="vkquote-input" placeholder="Your Name">
-              </div>
+  <!-- NAME -->
+  <div class="lxu-group">
+    <i class="lxu-icon fas fa-user"></i>
+    <input type="text" id="name" class="lkc-input lxu-input" placeholder="Your Name" required>
+  </div>
 
-              <!-- EMAIL -->
-              <div class="vkquote-group">
-                <i class="fas fa-envelope"></i>
-                <input type="email" class="vkquote-input" placeholder="Email Address">
-              </div>
+  <!-- EMAIL -->
+  <div class="lxu-group">
+    <i class="lxu-icon fas fa-envelope"></i>
+    <input type="email" id="email" class="lkc-input lxu-input" placeholder="Email Address" required>
+  </div>
 
-              <!-- PHONE -->
-              <div class="vkquote-group">
-                <i class="fas fa-phone"></i>
-                <input type="text" class="vkquote-input" placeholder="Phone Number">
-              </div>
+  <!-- PHONE -->
+  <div class="lxu-group">
+    <i class="lxu-icon fas fa-phone"></i>
+    <input type="text" id="phone" class="lkc-input lxu-input" placeholder="Phone Number" required>
+  </div>
 
-              <!-- SERVICE -->
-              <div class="vkquote-group">
-                <i class="fas fa-cogs"></i>
+  <!-- SERVICE -->
+  <div class="lxu-group">
+    <i class="lxu-icon fas fa-cogs"></i>
+    <select id="service" class="lkc-input lxu-input" required>
+  <option value="" disabled selected>Select Service</option>
+  <option value="LCL Consolidation">LCL Consolidation</option>
+  <option value="DG Handling">DG Handling</option>
+  <option value="Air Freight">Air Freight</option>
+  <option value="Ocean Freight">Ocean Freight</option>
+  <option value="Project Cargo">Project Cargo</option>
+  <!-- <option value="Customs Handling">Customs Handling</option> -->
+</select>
+  </div>
 
-                <select class="vkquote-input">
-                  <option>Select Service</option>
-                  <option>LCL Consolidation</option>
-                  <option>DG Handling</option>
-                  <option>Air Freight</option>
-                  <option>Ocean Freight</option>
-                  <option>Project Cargo</option>
-                </select>
-              </div>
+  <!-- MESSAGE -->
+  <div class="lxu-group lxu-textarea">
+    <i class="lxu-icon fas fa-comment"></i>
+    <textarea id="message" class="lkc-input lxu-input" rows="4" placeholder="Enter your message"></textarea>
+  </div>
 
-              <!-- MESSAGE -->
-              <div class="vkquote-group">
-                <i class="fas fa-comment"></i>
+  <!-- BUTTON + REVIEWS -->
+  <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-3">
+    
+    <button type="submit" class="logix-btn">
+      Get Your Quote <i class="fas fa-arrow-right"></i>
+    </button>
 
-                <textarea class="vkquote-input" placeholder="Enter your message"></textarea>
-              </div>
+    <div class="reviews">
+      <span>212+ Reviews</span>
+      <div class="stars">
+        <i class="fas fa-star"></i><i style="margin-left: 3px;" class="fas fa-star"></i>
+        <i style="margin-left: -3px;" class="fas fa-star"></i><i style="margin-left: 3px;" class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+    </div>
 
-              <!-- BUTTON -->
-              <div class="d-flex justify-content-between align-items-center flex-wrap gap-4 mt-4">
+  </div>
 
-                <button type="submit" class="vkquote-submit">
-                  Get Your Quote
-                  <i class="fas fa-arrow-right"></i>
-                </button>
-
-                <div class="vkquote-review">
-
-                  <div class="vkquote-review-text">
-                    212+ Reviews
-                  </div>
-
-                  <div class="vkquote-stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </form>
+</form>
 
           </div>
 
@@ -1741,6 +1732,9 @@ Leading LCL Consolidation Experts!
 </section>
 
 
+
+
+
 <footer class="lx-footer">
   <div class="container">
 
@@ -1748,12 +1742,9 @@ Leading LCL Consolidation Experts!
 
       <!-- LOGO -->
       <div class="col-lg-3 col-md-6">
-       <img src="images/logo.png" class="lx-logo mb-3" alt="">
+       <img src="images/logo.jpeg" class="lx-logo mb-3" alt="">
 
-        <h5 style="color:white;">
-          
-          LINKING YOUR THINKING
-        </h5>
+
 
         <p class="lx-desc">
           Delivering Logistics with Precision, Powered by Trust.
