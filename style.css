@@ -603,6 +603,10 @@ header
   .plane {
     font-size: 25px;
   }
+    .vkserve-big-card{
+    flex-direction: column;
+    padding: 30px;
+  }
 }
  
 /* SECTION */
@@ -9347,4 +9351,447 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     overflow: hidden;
     padding: 40px !important;
 }
+}
+
+
+
+/* =========================
+   LOGISTICS QUOTE SECTION
+========================= */
+
+.vkquote-section{
+  position: relative;
+  overflow: hidden;
+  background: #f4f7fb;
+}
+
+/* LEFT SIDE IMAGE */
+
+.vkquote-image-side{
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.vkquote-image-side img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.72);
+}
+
+.vkquote-image-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.55)
+  );
+}
+
+/* FLOATING TEXT */
+
+.vkquote-floating-text{
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  z-index: 2;
+  color: #fff;
+  max-width: 500px;
+}
+
+.vkquote-floating-text span{
+  display: inline-block;
+  padding: 10px 22px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.vkquote-floating-text h2{
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.vkquote-floating-text p{
+  font-size: 16px;
+  line-height: 1.9;
+  opacity: 0.9;
+}
+
+/* RIGHT FORM AREA */
+
+.vkquote-form-side{
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  position: relative;
+}
+
+.vkquote-form-card{
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* TAG */
+
+.vkquote-tag{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: #fff3e8;
+  color: #ff6b00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.vkquote-form-card h2{
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+/* FORM GROUP */
+
+.vkquote-group{
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.vkquote-input{
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 18px 18px 18px 55px;
+  font-size: 16px;
+  background: transparent;
+  transition: 0.4s ease;
+  color: #111;
+}
+
+.vkquote-input:focus{
+  outline: none;
+  border-color: #ff6b00;
+}
+
+.vkquote-group i{
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  color: #ff6b00;
+  font-size: 16px;
+}
+
+textarea.vkquote-input{
+  resize: none;
+  min-height: 120px;
+}
+
+/* BUTTON */
+
+.vkquote-submit{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  padding: 18px 38px;
+  background: linear-gradient(135deg,#ff6b00,#ff9d00);
+  color: #fff;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.4s ease;
+  box-shadow: 0 14px 35px rgba(255,107,0,0.3);
+}
+
+.vkquote-submit:hover{
+  transform: translateY(-4px);
+}
+
+/* REVIEW */
+
+.vkquote-review{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vkquote-review-text{
+  font-weight: 600;
+  color: #222;
+}
+
+.vkquote-stars{
+  color: #ffb400;
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+  .vkquote-image-side{
+    min-height: 500px;
+  }
+
+  .vkquote-form-side{
+    min-height: auto;
+    padding: 50px 25px;
+  }
+
+  .vkquote-floating-text{
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .vkquote-floating-text h2{
+    font-size: 34px;
+  }
+
+  .vkquote-form-card h2{
+    font-size: 36px;
+  }
+
+}
+
+.vkserve-main-section{
+  position: relative;
+  padding: 100px 0;
+  background:
+  radial-gradient(circle at top,#073844,#021d24 60%);
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.vkserve-heading-area{
+  margin-bottom: 80px;
+}
+
+.vkserve-subtitle{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.vkserve-subtitle i{
+  color: #ff2a2a;
+}
+
+.vkserve-main-title{
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* TOP LABEL */
+
+.vkserve-top-label{
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.vkserve-top-label span{
+  background: linear-gradient(135deg,#ff2a2a,#ff6b3d);
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(255,42,42,0.25);
+}
+
+/* LINE */
+
+.vkserve-top-line{
+  position: absolute;
+  top: 240px;
+  left: 18%;
+  width: 64%;
+  height: 3px;
+  background: #ff2a2a;
+}
+
+.vkserve-top-line::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 40px;
+  background: #ff2a2a;
+}
+
+.vkserve-top-line::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 40px;
+  background: #ff2a2a;
+}
+
+/* BIG CARD */
+
+.vkserve-big-card{
+  background: #f8f8f8;
+  border-radius: 35px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  transition: 0.4s ease;
+}
+
+.vkserve-big-card:hover{
+  transform: translateY(-10px);
+}
+
+.vkserve-big-image{
+  width: 45%;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.vkserve-big-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vkserve-big-content{
+  width: 55%;
+  position: relative;
+}
+
+.vkserve-card-number{
+  position: absolute;
+  top: -35px;
+  right: 0;
+  font-size: 90px;
+  font-weight: 700;
+  color: rgba(0,0,0,0.05);
+}
+
+.vkserve-card-icon{
+  width: 88px;
+  height: 88px;
+  background: linear-gradient(135deg,#ff2020,#ff4040);
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 34px;
+  margin-bottom: 25px;
+  box-shadow: 0 15px 35px rgba(255,32,32,0.3);
+}
+
+.vkserve-big-content h3{
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.vkserve-big-content p{
+  font-size: 17px;
+  line-height: 2;
+  color: #666;
+}
+
+/* SMALL CARD */
+
+.vkserve-small-card{
+  background: #f8f8f8;
+  border-radius: 28px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  transition: 0.4s ease;
+}
+
+.vkserve-small-card:hover{
+  transform: translateY(-8px);
+}
+
+.vkserve-small-number{
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 80px;
+  font-weight: 700;
+  color: rgba(255,42,42,0.08);
+}
+
+.vkserve-small-icon{
+  width: 68px;
+  height: 68px;
+  background: linear-gradient(135deg,#ff2020,#ff4040);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.vkserve-small-card h4{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.vkserve-small-card p{
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+  .vkserve-top-line,
+  .vkserve-top-label{
+    display: none;
+  }
+
+
+
+  .vkserve-big-image,
+  .vkserve-big-content{
+    width: 100%;
+  }
+
+  .vkserve-big-content h3{
+    font-size: 28px;
+  }
+
 }
