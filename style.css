@@ -9795,3 +9795,44 @@ textarea.vkquote-input{
   }
 
 }
+
+
+/* QUOTE BOX */
+
+.lx-about-quote{
+  margin-top:35px;
+  padding:24px 28px;
+  border-left:4px solid #E52125;
+  background:#fafafa;
+  position:relative;
+  overflow:hidden;
+}
+
+.lx-about-quote::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,rgba(229,33,37,0.04),transparent);
+}
+
+.lx-quote-icon{
+  font-size:22px;
+  color:#E52125;
+  margin-bottom:12px;
+  position:relative;
+  z-index:2;
+}
+
+.lx-about-quote p{
+  font-size:17px;
+  line-height:1.8;
+  color:#222;
+  margin:0;
+  font-weight:500;
+  position:relative;
+  z-index:2;
+}
+
