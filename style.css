@@ -9798,43 +9798,144 @@ textarea.vkquote-input{
 
 }
 
-
-/* QUOTE BOX */
+/* ===================================
+   PROFESSIONAL QUOTE BOX
+=================================== */
 
 .lx-about-quote{
-  margin-top:35px;
-  padding:24px 28px;
-  border-left:4px solid #E52125;
-  background:#fafafa;
+  margin-top:10px;
+  padding:15px;
+  background:#ffffff;
+  border-radius:18px;
   position:relative;
   overflow:hidden;
+  box-shadow:0 15px 45px rgba(0,0,0,0.06);
+  border:1px solid rgba(0,0,0,0.04);
+  transition:.4s;
 }
+
+/* HOVER */
+
+.lx-about-quote:hover{
+  transform:translateY(-6px);
+}
+
+/* RED SIDE BAR */
 
 .lx-about-quote::before{
   content:'';
   position:absolute;
   top:0;
   left:0;
-  width:100%;
+  width:5px;
   height:100%;
-  background:linear-gradient(90deg,rgba(229,33,37,0.04),transparent);
+  background:linear-gradient(to bottom,#E52125,#ff6a6d);
 }
+
+/* LIGHT GLOW */
+
+.lx-about-quote::after{
+  content:'';
+  position:absolute;
+  width:220px;
+  height:220px;
+  background:rgba(229,33,37,0.05);
+  border-radius:50%;
+  top:-120px;
+  right:-120px;
+  filter:blur(10px);
+}
+
+/* TOP */
+
+.lx-quote-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:22px;
+  position:relative;
+  z-index:2;
+}
+
+/* ICON */
 
 .lx-quote-icon{
-  font-size:22px;
-  color:#E52125;
-  margin-bottom:12px;
-  position:relative;
-  z-index:2;
+  width:52px;
+  height:52px;
+  background:#E52125;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  flex-shrink:0;
+  box-shadow:0 10px 25px rgba(229,33,37,0.25);
 }
+
+/* LABEL */
+
+.lx-quote-label{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#E52125;
+  text-transform:uppercase;
+}
+
+/* QUOTE */
 
 .lx-about-quote p{
-  font-size:17px;
-  line-height:1.8;
-  color:#222;
-  margin:0;
+  font-size:20px;
+  line-height:1.9;
+  color:#111;
   font-weight:500;
+  margin:0;
   position:relative;
   z-index:2;
 }
 
+/* BOTTOM */
+
+.lx-quote-bottom{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-top:28px;
+  position:relative;
+  z-index:2;
+}
+
+/* LINE */
+
+.lx-line{
+  width:70px;
+  height:2px;
+  background:#E52125;
+}
+
+/* TAGLINE */
+
+.lx-quote-bottom h6{
+  margin:0;
+  font-size:18px;
+  color:#e52125;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:900;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .lx-about-quote{
+    padding:28px;
+  }
+
+  .lx-about-quote p{
+    font-size:17px;
+    line-height:1.8;
+  }
+
+}
