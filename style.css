@@ -9316,7 +9316,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .hero-content h1 {
     font-size: 30px !important;
   }
-
+.lx-about-quote{
+  margin-bottom:10px;
+}
 
 }
 /* ONLY FOR 1024px SCREEN */
